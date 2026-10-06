@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simple to-do list to help you keep track of your tasks."
+    />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="todo-app">
+      <header class="app-header">
+        <p class="eyebrow">YOUR DAY, IN ORDER</p>
+        <h1>To do<span>.</span></h1>
+        <p class="subtitle">A little progress goes a long way.</p>
+      </header>
+
+      <form class="task-form" id="task-form">
+        <label class="visually-hidden" for="task-input">Add a task</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          placeholder="What needs to get done?"
+          autocomplete="off"
+          maxlength="160"
+          required
+        />
+        <button type="submit">Add task</button>
+      </form>
+
+      <section class="task-section" aria-labelledby="tasks-heading">
+        <div class="list-heading">
+          <h2 id="tasks-heading">Your tasks</h2>
+          <span class="task-count" id="task-count">0 tasks</span>
+        </div>
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        <p class="empty-state" id="empty-state">Nothing on your list yet. Add a task to get started.</p>
+        <p class="storage-status" id="storage-status" role="status" hidden></p>
+      </section>
+    </main>
+  </body>
+</html>
